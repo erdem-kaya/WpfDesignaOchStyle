@@ -9,17 +9,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resourses\Fonts\fa-regular-400.ttf" />
+    <None Remove="Resourses\Fonts\fa-solid-900.ttf" />
     <None Remove="Resourses\Images\get-started.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Resourses\Fonts\fa-regular-400.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resourses\Fonts\fa-solid-900.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resourses\Images\get-started.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
   <ItemGroup>

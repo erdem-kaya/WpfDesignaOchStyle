@@ -9,14 +9,30 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="400">
     <Border Background="#333333" CornerRadius="0 0 25 25">
-        <Grid Margin="50">
+        <Grid Margin="50 20 50 40">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
-            <TextBlock Style="{StaticResource HeadlineText}" Text="{Binding Headline, FallbackValue='New Activity'}"/>
+            <TextBlock Grid.Row="0" Style="{StaticResource HeadlineText}" Text="{Binding Headline, FallbackValue='New Activity'}"/>
 
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Title" Style="{StaticResource LabelText}" />
+                <TextBox Text="{Binding ActivityItem.Title}" Style="{StaticResource InputText}" />
+                <TextBlock Text="Descritpion" Style="{StaticResource LabelText}" />
+                <TextBox Text="{Binding ActivityItem.Description}"  Style="{StaticResource InputArea}"/>
+
+                <TextBlock Text="{Binding WarningMessage, FallbackValue='You must enter a title'}" Style="{StaticResource WarningTextTitle}" />
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+                <!--<TextBlock Text="&#xf007;" FontFamily="{StaticResource fa-solid}" />-->
+                <Button Command="{Binding AddCommand}" Style="{StaticResource StandardButton}" Content="Save Activity" Margin="0 0 0 10" />
+                <Button Command="{Binding CancelCommand}" Style="{StaticResource CancelButton}" Content="Cancel" />
+            </StackPanel>
 
 
 

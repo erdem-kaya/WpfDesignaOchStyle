@@ -21,4 +21,49 @@
     </Style>
     <!-- Headline Text - Finish -->
 
+
+    <!-- Label Text - Start -->
+    <Style x:Key="LabelText" TargetType="TextBlock">
+        <Setter Property="Margin" Value="3 5" />
+        <Setter Property="Foreground" Value="#9FABBD" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="Medium" />
+    </Style>
+    <!-- Label Text - Finish -->
+
+
+    <!-- Warning Text - Start -->
+    <Style x:Key="WarningTextTitle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="#EA79AC" />
+        <Setter Property="Height" Value="50" />
+    </Style>
+    <!-- Warning Text - Finish -->
+
+    <!-- Input Text - Start -->
+    <Style x:Key="InputText" TargetType="TextBox">
+        <Setter Property="Margin" Value="0 0 0 15" />
+        <Setter Property="Background" Value="#44434f" />
+        <Setter Property="Foreground" Value="#9FABBD" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Padding" Value="12" />
+        <Setter Property="BorderThickness" Value="0" />
+    </Style>
+    <!-- Input Text - Finish -->
+    
+
+    <!-- Input Area - Start -->
+    <Style x:Key="InputArea" TargetType="TextBox" BasedOn="{StaticResource InputText}">
+        <Setter Property="Height" Value="240"/>
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <!--   Input Area - Finish -->
+    
+
+    
+
 </ResourceDictionary>
